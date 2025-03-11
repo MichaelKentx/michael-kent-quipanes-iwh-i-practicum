@@ -1,23 +1,27 @@
 doctype html
 html(lang="en")
     head
-        title= title
+        title=`${title}`
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="/css/style.css")
     body
         h1 Anime Characters
         if data.length
-            table
-                thead
-                    tr
-                        th Name
-                        th Genre
-                        th Species
-                tbody
-                    each anime in data
+            .card
+                .table-header
+                    a(href="/update-cobj") ➕ Add to this table
+                table
+                    thead
                         tr
-                            td= anime.properties.name
-                            td= anime.properties.genre
-                            td= anime.properties.species
+                            th Name
+                            th Genre
+                            th Species
+                    tbody
+                        each anime in data
+                            tr
+                                td= anime.properties.name
+                                td= anime.properties.genre
+                                td= anime.properties.species
+                                    br
         else
             p No anime characters found.

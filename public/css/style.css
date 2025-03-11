@@ -51,10 +51,11 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: rgb(76, 164, 157);
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+    color: #ddd;
 }
 
 
@@ -73,5 +74,12 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: rgb(76, 164, 157)
+}
+
+.table-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; 
+    width: 100%;
 }
